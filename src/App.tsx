@@ -4,11 +4,19 @@ import Message from "./components/Message.tsx";
 import "./App.css";
 function App() {
   let navBars = ["Home", "Education", "Projects", "Contact"];
-  const homeMessage = "Hello, Thank you for stopping by.";
+  const homeMessage = "Hello, Thank you for stopping by my portfolio.";
   return (
     <div>
       <Navbar names={navBars}></Navbar>
-      <Message welcome={homeMessage}></Message>
+      <div
+        style={{
+          marginTop: 100,
+          marginLeft: 64,
+        }}
+      >
+        <Message welcome={homeMessage} size={36} />
+        <Message welcome="My Name is Jeff Kim" size={60}></Message>
+      </div>
     </div>
   );
 }
