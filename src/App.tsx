@@ -6,16 +6,18 @@ function App() {
   let navBars = ["Home", "Education", "Projects", "Contact"];
   const homeMessage = "Hello, Thank you for stopping by my portfolio.";
   return (
-    <div>
-      <Navbar names={navBars}></Navbar>
-      <div
-        style={{
-          marginTop: 100,
-          marginLeft: 64,
-        }}
-      >
-        <Message welcome={homeMessage} size={36} />
-        <Message welcome="My Name is Jeff Kim" size={60}></Message>
+    <div class="card text-bg-primary mb-3">
+      <div>
+        <Navbar names={navBars}></Navbar>
+        <div
+          style={{
+            marginTop: 100,
+            marginLeft: 64,
+          }}
+        >
+          <Message welcome={homeMessage} size={36} />
+          <Message welcome="My Name is Jeff Kim" size={60}></Message>
+        </div>
       </div>
     </div>
   );
