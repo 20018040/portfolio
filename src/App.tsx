@@ -6,12 +6,18 @@ function App() {
   let navBars = ["Home", "Education", "Projects", "Contact"];
   const homeMessage = "Hello, Thank you for stopping by my portfolio.";
   return (
-    <div class="card text-bg-primary mb-3">
+    <div
+      style={{
+        paddingTop: 2,
+        backgroundColor: "#ffffffff",
+        color: "#9492eeff",
+      }}
+    >
       <div>
         <Navbar names={navBars}></Navbar>
         <div
           style={{
-            marginTop: 100,
+            marginTop: 120,
             marginLeft: 64,
           }}
         >

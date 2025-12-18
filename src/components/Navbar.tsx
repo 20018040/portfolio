@@ -8,7 +8,7 @@ const Navbar = ({ names }: Props) => {
   return (
     <nav
       className="navbar navbar-expand-lg w-100 m-2 rounded-3"
-      style={{ backgroundColor: "#6e6c6cff" }}
+      style={{ backgroundColor: "#ffffffff" }}
     >
       <div className="container-fluid ">
         {/* remove side padding */}
@@ -16,7 +16,7 @@ const Navbar = ({ names }: Props) => {
           {names.map((name, idx) => (
             <li className="nav-item" key={idx}>
               <a
-                className="nav-link text-white "
+                className="nav-link text-black "
                 href="#"
                 style={{ fontSize: "25px" }}
               >
