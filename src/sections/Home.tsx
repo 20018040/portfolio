@@ -28,8 +28,8 @@ const techLogos = [
   },
   {
     node: <SiJavascript />,
-    title: "Java",
-    href: "https://www.oracle.com/java/",
+    title: "JavaScript",
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     node: <SiTailwindcss />,
@@ -44,7 +44,6 @@ const techLogos = [
     title: "Android",
     href: "https://developer.android.com",
   },
-
   {
     node: <SiHtml5 />,
     title: "HTML",
@@ -59,9 +58,10 @@ const techLogos = [
 ];
 
 const Home = () => {
-  let navBars = ["Home", "Education", "Projects", "Contact"];
+  const navBars = ["Home", "Education", "Projects", "Contact"];
   const homeMessage = "Hello, Thank you for stopping by my portfolio.";
   const nameMessage = "My Name is Jeff Kim";
+
   return (
     <div
       style={{
@@ -69,9 +69,12 @@ const Home = () => {
         width: "100%",
         height: "100vh",
         overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between", // top content + bottom LogoLoop
       }}
     >
-      {}
+      {/* Particles in the background */}
       <div
         style={{
           position: "absolute",
@@ -94,13 +97,12 @@ const Home = () => {
         />
       </div>
 
-      {/* Content on top */}
+      {/* Main content */}
       <div
         style={{
           position: "relative",
           zIndex: 1,
-          paddingTop: 20,
-          backgroundColor: "transparent",
+          padding: 20,
           color: "#ffffffff",
         }}
       >
@@ -120,28 +122,22 @@ const Home = () => {
             cursorCharacter="|"
           />
         </div>
-        <div
-          style={{
-            height: "200px",
-            position: "relative",
-            overflow: "hidden",
-            paddingTop: 100,
-          }}
-        >
-          {/* Basic horizontal loop */}
-          <LogoLoop
-            logos={techLogos}
-            speed={120}
-            direction="left"
-            logoHeight={48}
-            gap={40}
-            hoverSpeed={20}
-            scaleOnHover
-            fadeOut
-            fadeOutColor="#ffffff"
-            ariaLabel="Technology partners"
-          />
-        </div>
+      </div>
+
+      {/* LogoLoop at the bottom */}
+      <div style={{ height: "100px", overflow: "hidden", zIndex: 1 }}>
+        <LogoLoop
+          logos={techLogos}
+          speed={120}
+          direction="left"
+          logoHeight={48}
+          gap={40}
+          hoverSpeed={20}
+          scaleOnHover
+          fadeOut
+          fadeOutColor="#ffffff"
+          ariaLabel="Technology partners"
+        />
       </div>
     </div>
   );
