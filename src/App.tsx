@@ -4,47 +4,60 @@ import Message from "./components/Message.tsx";
 import "./App.css";
 import Particles from "./components/Particles.tsx";
 import TextType from "./components/Texttype.tsx";
-import LogoLoop from "./components/Logoloop.tsx";
+import LogoLoop from "./components/LogoLoop.tsx";
 import {
   SiReact,
-  SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
+  SiJavascript,
+  SiKotlin,
+  SiAndroid,
+  SiPython,
+  SiHtml5,
+  SiMongodb,
+  SiFirebase,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
   {
     node: <SiTypescript />,
     title: "TypeScript",
     href: "https://www.typescriptlang.org",
   },
   {
+    node: <SiJavascript />,
+    title: "Java",
+    href: "https://www.oracle.com/java/",
+  },
+  {
     node: <SiTailwindcss />,
     title: "Tailwind CSS",
     href: "https://tailwindcss.com",
   },
+  { node: <FaJava />, title: "Java", href: "https://www.oracle.com/java/" },
+  { node: <SiPython />, title: "Python", href: "https://www.python.org" },
+  { node: <SiKotlin />, title: "Kotlin", href: "https://kotlinlang.org/" },
+  {
+    node: <SiAndroid />,
+    title: "Android",
+    href: "https://developer.android.com",
+  },
+
+  {
+    node: <SiHtml5 />,
+    title: "HTML",
+    href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  { node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com" },
+  {
+    node: <SiFirebase />,
+    title: "Firebase",
+    href: "https://firebase.google.com",
+  },
 ];
 
-// Alternative with image sources
-const imageLogos = [
-  {
-    src: "/logos/company1.png",
-    alt: "Company 1",
-    href: "https://company1.com",
-  },
-  {
-    src: "/logos/company2.png",
-    alt: "Company 2",
-    href: "https://company2.com",
-  },
-  {
-    src: "/logos/company3.png",
-    alt: "Company 3",
-    href: "https://company3.com",
-  },
-];
 function App() {
   let navBars = ["Home", "Education", "Projects", "Contact"];
   const homeMessage = "Hello, Thank you for stopping by my portfolio.";
@@ -59,7 +72,7 @@ function App() {
         overflow: "hidden",
       }}
     >
-      {/* Particles background wrapped in a div */}
+      {}
       <div
         style={{
           position: "absolute",
@@ -123,22 +136,11 @@ function App() {
             direction="left"
             logoHeight={48}
             gap={40}
-            hoverSpeed={0}
+            hoverSpeed={20}
             scaleOnHover
             fadeOut
             fadeOutColor="#ffffff"
             ariaLabel="Technology partners"
-          />
-
-          {/* Vertical loop with deceleration on hover */}
-          <LogoLoop
-            logos={techLogos}
-            speed={80}
-            direction="up"
-            logoHeight={48}
-            gap={40}
-            hoverSpeed={20}
-            fadeOut
           />
         </div>
       </div>
