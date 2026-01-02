@@ -1,5 +1,6 @@
 import React from "react";
 import Message from "../components/Message";
+import MePic from "../components/profilepic.jpg";
 
 const Aboutme = () => {
   const title = "About Me\n\n";
@@ -9,19 +10,34 @@ My strengths include being open to learning new frameworks, languages, and APIs 
 Hobbies: body-building, table tennis, basketball, gaming.\n
 You can always reach out to me on my LinkedIn, Email, or GitHub.`;
   return (
-    <div
-      style={{
-        display: "flex",
-        height: "100vh",
-        width: "65vw",
-        flexDirection: "column",
-        paddingLeft: "200px",
-        whiteSpace: "pre-line",
-      }}
-    >
-      <div>
-        <Message welcome={title} size={36} color={"#e9e9e9ff"} />
-        <Message welcome={firstMessage} size={36} color={"#e9e9e9ff"} />
+    <div style={{ display: "flex" }}>
+      <div
+        style={{
+          display: "flex",
+          height: "100vh",
+          width: "65vw",
+          flexDirection: "column",
+          paddingLeft: "200px",
+          whiteSpace: "pre-line",
+        }}
+      >
+        <div>
+          <Message welcome={title} size={36} color={"#e9e9e9ff"} />
+          <Message welcome={firstMessage} size={36} color={"#e9e9e9ff"} />
+        </div>
+      </div>
+      <div
+        style={{
+          width: "25%",
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          paddingTop: "100px",
+          paddingLeft: "50px",
+        }}
+      >
+        <img src={MePic} alt="Profile"></img>
       </div>
     </div>
   );
