@@ -5,6 +5,7 @@ import "../App.css";
 import Particles from "../components/Particles.tsx";
 import TextType from "../components/Texttype.tsx";
 import LogoLoop from "../components/LogoLoop.tsx";
+import ProfileCard from "../components/ProfileCard.tsx";
 import {
   SiReact,
   SiTypescript,
@@ -18,6 +19,7 @@ import {
   SiFirebase,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import { Columns } from "lucide-react";
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
@@ -66,12 +68,8 @@ const Home = () => {
     <div
       style={{
         position: "relative",
-        width: "100%",
-        height: "100vh",
-        overflow: "hidden",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between", // top content + bottom LogoLoop
       }}
     >
       {/* Particles in the background */}
@@ -98,6 +96,7 @@ const Home = () => {
       </div>
 
       {/* Main content */}
+      <Navbar names={navBars} />
       <div
         style={{
           position: "relative",
@@ -106,8 +105,7 @@ const Home = () => {
           color: "#ffffffff",
         }}
       >
-        <Navbar names={navBars} />
-        <div style={{ marginTop: 120, marginLeft: 64 }}>
+        <div style={{ marginTop: 60, marginLeft: 64, width: "65vw" }}>
           <Message welcome={homeMessage} size={36} />
           <Message welcome={nameMessage} size={60} />
           <TextType
@@ -122,10 +120,30 @@ const Home = () => {
             cursorCharacter="|"
           />
         </div>
+        <div style={{ width: "25%", flexDirection: "row" }}>
+          <ProfileCard
+            name="Jeff Kim"
+            title="Software Engineer"
+            handle="javicodes"
+            status="Online"
+            contactText="Contact Me"
+            avatarUrl="/path/to/avatar.jpg"
+            showUserInfo={true}
+            enableTilt={true}
+            enableMobileTilt={false}
+            onContactClick={() => console.log("Contact clicked")}
+          />
+        </div>
       </div>
 
       {/* LogoLoop at the bottom */}
-      <div style={{ height: "100px", overflow: "hidden", zIndex: 1 }}>
+      <div
+        style={{
+          height: "100px",
+          overflow: "hidden",
+          zIndex: 1,
+        }}
+      >
         <LogoLoop
           logos={techLogos}
           speed={120}
