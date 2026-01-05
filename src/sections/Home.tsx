@@ -6,6 +6,7 @@ import Particles from "../components/Particles.tsx";
 import TextType from "../components/Texttype.tsx";
 import LogoLoop from "../components/LogoLoop.tsx";
 import ProfileCard from "../components/ProfileCard.tsx";
+import MePic from "../components/profilepic.jpg";
 import {
   SiReact,
   SiTypescript,
@@ -60,9 +61,15 @@ const techLogos = [
 ];
 
 const Home = () => {
-  const navBars = ["Home", "Education", "Projects", "Contact"];
-  const homeMessage = "Hello, Thank you for stopping by my portfolio.";
-  const nameMessage = "My Name is Jeff Kim";
+  // const navBars = ["Home", "About Me", "Projects", "Contact"];
+  const navBars = [
+    { label: "Home", id: "home" },
+    { label: "About Me", id: "aboutme" },
+    { label: "Resume", id: "resume" },
+    { label: "Contact", id: "contact" },
+  ];
+  const homeMessage = "Hello, Thank you for stopping by my portfolio.\n";
+  const nameMessage = "I'm Jeff Kim";
 
   return (
     <div
@@ -99,15 +106,25 @@ const Home = () => {
       <Navbar names={navBars} />
       <div
         style={{
-          position: "relative",
           zIndex: 1,
           padding: 20,
           color: "#ffffffff",
+          display: "flex",
+          alignItems: "center",
         }}
       >
-        <div style={{ marginTop: 60, marginLeft: 64, width: "65vw" }}>
-          <Message welcome={homeMessage} size={36} />
-          <Message welcome={nameMessage} size={60} />
+        <div
+          style={{
+            marginTop: 60,
+            marginLeft: 64,
+            width: "65vw",
+            height: "70vh",
+            flexDirection: "column",
+            whiteSpace: "pre-line",
+          }}
+        >
+          <Message welcome={homeMessage} size={32} />
+          <Message welcome={nameMessage} size={100} />
           <TextType
             text={[
               "Front-end Developer",
@@ -120,18 +137,30 @@ const Home = () => {
             cursorCharacter="|"
           />
         </div>
-        <div style={{ width: "25%", flexDirection: "row" }}>
+        <div
+          style={{
+            width: "25%",
+            height: "70vh",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "row",
+            transform: "scale(1.2)",
+            paddingTop: "50px",
+          }}
+        >
           <ProfileCard
             name="Jeff Kim"
             title="Software Engineer"
-            handle="javicodes"
+            handle="d"
             status="Online"
             contactText="Contact Me"
-            avatarUrl="/path/to/avatar.jpg"
-            showUserInfo={true}
-            enableTilt={true}
+            avatarUrl={MePic}
+            showUserInfo={false}
+            enableTilt={false}
             enableMobileTilt={false}
             onContactClick={() => console.log("Contact clicked")}
+            behindGlowEnabled={false}
+            behindGlowColor="rgba(0,0,0,0)"
           />
         </div>
       </div>

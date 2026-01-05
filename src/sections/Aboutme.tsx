@@ -29,7 +29,7 @@ You can always reach out to me on my LinkedIn, Email, or GitHub.`;
       <div
         style={{
           width: "25%",
-          height: "100vh",
+          height: "90vh",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

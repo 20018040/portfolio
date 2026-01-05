@@ -2,7 +2,7 @@ import React from "react";
 
 interface Props {
   //   links?: string[];
-  names: string[];
+  names: { label: string; id: string }[];
 }
 const Navbar = ({ names }: Props) => {
   return (
@@ -17,10 +17,10 @@ const Navbar = ({ names }: Props) => {
             <li className="nav-item" key={idx}>
               <a
                 className="nav-link text-white "
-                href="#"
+                href={`#${name.id}`}
                 style={{ fontSize: "25px" }}
               >
-                {name}
+                {name.label}
               </a>
             </li>
           ))}

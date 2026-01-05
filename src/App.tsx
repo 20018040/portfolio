@@ -4,9 +4,15 @@ import Aboutme from "./sections/Aboutme";
 function App() {
   return (
     <>
-      <Home />,
-      <Aboutme />,
-      <Resume />;
+      <div id="home" className="h-screen">
+        <Home />
+      </div>
+      <div id="aboutme" className="h-screen">
+        <Aboutme />
+      </div>
+      <div id="resume" className="h-screen">
+        <Resume />
+      </div>
     </>
   );
 }
