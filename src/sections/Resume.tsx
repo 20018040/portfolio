@@ -29,7 +29,7 @@ const Resume = () => {
         }}
       >
         <iframe
-          src="/Resume.pdf#toolbar=0&navpanes=0&scrollbar=0#view=FitH"
+          src="/portfolio/Resume.pdf#toolbar=0&navpanes=0&scrollbar=0#view=FitH"
           width="100%"
           height="600px"
           style={{ border: "none", overflow: "hidden" }}
