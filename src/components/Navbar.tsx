@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Props {
   //   links?: string[];
   names: { label: string; id: string }[];

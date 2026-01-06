@@ -1,4 +1,3 @@
-import React from "react";
 import Message from "../components/Message";
 import Experience from "../components/Experience";
 const title = "Resume";

@@ -20,7 +20,6 @@ import {
   SiFirebase,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-import { Columns } from "lucide-react";
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },

@@ -1,4 +1,3 @@
-import React from "react";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 const Contact = () => {
   return (
